@@ -468,3 +468,133 @@ VALUES ('23', '351', '{"title":"", "sub_title":"","streams":[620],"style-element
 18 done
 UPDATE auto_report_module SET config_options='{"title":"", "sub_title":"","streams":[620],"style-elements":[{"margin-top":"25px"}], "max-rows":"5", "max-chars-per-entry":"1000"}' WHERE report_id=2 And sort_order=351;
 
+
+# Create Auto Report
+
+## Follow these instructions to create a new Auto Report
+
+1. Insert a new record in the auto_report table for the new report and remember the new report_id.
+2. Copy auto_report_module records belonging to the source report 
+3. and insert them in the same table with an updated report_id
+4. In the image directory create a new subdir with the client_id as the name 
+5. Add the png logo of the client and rename it 1.png (must be 270 px height)
+6. Change the title in the config_options of module 31 ( the logo )
+
+
+
+
+queries for auto_report_modules below
+```php
+
+UPDATE auto_report_module 
+SET config_options='{"title":"Hollywood Records<br>Weekly Instagram Moderation Report", "sub_title":"Reporting dates: {$dates_reporting}",
+"streams":[619,620],
+"height_image_client":"35px", "text_margin_left":"100px","style-elements":[{"margin-left":"75px"}]}' 
+WHERE report_id=2 
+AND sort_order=0;
+
+
+UPDATE auto_report_module 
+SET config_options='{"title":"Rejection Overview", "sub_title":"","streams":[619,620],"style-elements":[{"margin-top":"8px"}]}' 
+WHERE report_id=2 
+AND sort_order=1;
+
+
+UPDATE auto_report_module 
+SET config_options='{"title":"Rejections by Page", "sub_title":"","streams":[619,620],"style-elements":[{"margin-top":"22px"}]}' 
+WHERE report_id=2 
+AND sort_order=2;
+
+
+UPDATE auto_report_module 
+SET config_options='{"title":"Rejections by Date", "sub_title":"","streams":[619,620],"style-elements":[{"margin-top":"22px"}]}' 
+WHERE report_id=2 
+AND sort_order=3;
+
+
+UPDATE auto_report_module 
+SET config_options='{"title":"", "sub_title":"","streams":[619,620],"style-elements":[{"margin-top":"22px"}]}' 
+WHERE report_id=2 
+AND sort_order=4;
+
+
+UPDATE auto_report_module 
+SET config_options='{"title":"Rejections Breakdown", "sub_title":"","streams":[619,620],"style-elements":[{"margin-top":"22px"}]}' 
+WHERE report_id=2 
+AND sort_order=5;
+
+
+UPDATE auto_report_module 
+SET config_options='{"title":"Rejections by Reason", "sub_title":"","streams":[619,620],"style-elements":[{"margin-top":"22px"}]}' 
+WHERE report_id=2 
+AND sort_order=6;
+
+
+UPDATE auto_report_module 
+SET config_options='{"title":"Rejections by Reason", "sub_title":"","streams":[619,620],"style-elements":[{"margin-top":"22px"}]}' 
+WHERE report_id=2 
+AND sort_order=7;
+
+
+UPDATE auto_report_module 
+SET config_options='{"title":"", "sub_title":"","streams":[619,620],"style-elements":[{"margin-top":"22px"}]}' 
+WHERE report_id=2 
+AND sort_order=8;
+
+
+UPDATE auto_report_module 
+SET config_options='{"title":"{$stream_name} {$source_code} Overview", "sub_title":"","streams":[619],"style-elements":[{"margin-top":"22px"}],"force_new_page":"YES"}' 
+WHERE report_id=2 
+AND sort_order=10;
+
+
+UPDATE auto_report_module 
+SET config_options='{"title":"Rejections by Day", "sub_title":"","streams":[619],"style-elements":[{"margin-top":"25px"}]}' WHERE report_id=2 
+AND sort_order=12;
+
+
+UPDATE auto_report_module 
+SET config_options='{"title":"Rejections by Reason", "sub_title":"","streams":[619],"style-elements":[{"margin-top":"25px"}]}' 
+WHERE report_id=2 
+AND sort_order=14;
+
+
+UPDATE auto_report_module 
+SET config_options='{"title":"", "sub_title":"","streams":[619],"style-elements":[{"margin-top":"25px"}]}' 
+WHERE report_id=2 
+AND sort_order=16;
+
+
+UPDATE auto_report_module 
+SET config_options='{"title":"{$stream_name} {$source_code} Overview", "sub_title":"","streams":[620],"style-elements":[{"margin-top":"25px"}],"force_new_page":"YES"}' 
+WHERE report_id=2 
+AND sort_order=20;
+
+
+UPDATE auto_report_module 
+SET config_options='{"title":"Rejections by Day", "sub_title":"","streams":[620],"style-elements":[{"margin-top":"25px"}]}' WHERE report_id=2 
+AND sort_order=22;
+
+
+UPDATE auto_report_module 
+SET config_options='{"title":"Rejections by Reason", "sub_title":"","streams":[620],"style-elements":[{"margin-top":"25px"}]}' 
+WHERE report_id=2 
+AND sort_order=24;
+
+
+UPDATE auto_report_module 
+SET config_options='{"title":"", "sub_title":"","streams":[620],"style-elements":[{"margin-top":"25px"}]}' 
+WHERE report_id=2 
+AND sort_order=26;
+
+
+UPDATE auto_report_module 
+SET config_options='{"title":"", "sub_title":"","streams":[619],"style-elements":[{"margin-top":"25px"}], "max-rows":"5", "max-chars-per-entry":"1000"}' 
+WHERE report_id=2 
+AND sort_order=350;
+
+
+UPDATE auto_report_module 
+SET config_options='{"title":"", "sub_title":"","streams":[620],"style-elements":[{"margin-top":"25px"}], "max-rows":"5", "max-chars-per-entry":"1000"}' 
+WHERE report_id=2 
+AND sort_order=351;
