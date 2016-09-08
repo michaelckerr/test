@@ -598,3 +598,7 @@ UPDATE auto_report_module
 SET config_options='{"title":"", "sub_title":"","streams":[620],"style-elements":[{"margin-top":"25px"}], "max-rows":"5", "max-chars-per-entry":"1000"}' 
 WHERE report_id=2 
 AND sort_order=351;
+
+
+
+
